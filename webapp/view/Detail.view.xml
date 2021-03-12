@@ -13,9 +13,14 @@
 
 		<!-- DynamicPage Content -->
 		<f:content>
-			<Label text="threadId"/>
-			<Text text="{products>threadId}"/>
+			<VBox>
+				<Label text="threadId"/>
+				<Text text="{products>threadId}"/>
 
+				<Button
+					text="3. Page"
+					press="onButtonPress"/>
+			</VBox>
 		</f:content>
 	</f:DynamicPage>
 </mvc:View>
