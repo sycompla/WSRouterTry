@@ -1,0 +1,51 @@
+<mvc:View
+	controllerName="sap.ui.demo.fiori2.controller.Master"
+	xmlns="sap.m"
+	xmlns:f="sap.f"
+	xmlns:mvc="sap.ui.core.mvc">
+	<f:DynamicPage id="dynamicPageId" toggleHeaderOnTitleClick="false">
+		<!-- DynamicPage Title -->
+		<f:title>
+			<f:DynamicPageTitle>
+				<f:heading>
+					<Title text="Services"/>
+				</f:heading>
+			</f:DynamicPageTitle>
+		</f:title>
+
+		<!-- DynamicPage Content -->
+		<f:content>
+			<VBox fitContainer="true">
+				<Table
+					id="productsTable"
+					inset="false"
+					items="{
+						path: 'products>/data'
+					}"
+					class="sapFDynamicPageAlignContent"
+					width="auto">
+					<columns>
+						<Column width="12em">
+							<Text text="Service"/>
+						</Column>
+						<Column>
+							<Text text="Result"/>
+						</Column>
+						<Column>
+							<Text text="ResultMessage"/>
+						</Column>
+					</columns>
+					<items>
+						<ColumnListItem type="Navigation" press=".onListItemPress">
+							<cells>
+								<ObjectIdentifier title="{products>service}" text="{products>ProductId}"/>
+								<Label text="{products>result}"/>
+								<Label text="{products>resultMessage}"/>
+							</cells>
+						</ColumnListItem>
+					</items>
+				</Table>
+			</VBox>
+		</f:content>
+	</f:DynamicPage>
+</mvc:View>

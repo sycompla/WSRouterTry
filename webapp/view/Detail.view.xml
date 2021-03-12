@@ -1,0 +1,21 @@
+<mvc:View
+		controllerName="sap.ui.demo.fiori2.controller.Detail"
+		xmlns="sap.m"
+		xmlns:f="sap.f"
+		xmlns:mvc="sap.ui.core.mvc"
+		id="detail">
+	<f:DynamicPage id="dynamicPageId" toggleHeaderOnTitleClick="false">
+		<!-- DynamicPage Title -->
+		<f:title>
+			<f:DynamicPageTitle>
+			</f:DynamicPageTitle>
+		</f:title>
+
+		<!-- DynamicPage Content -->
+		<f:content>
+			<Label text="threadId"/>
+			<Text text="{products>threadId}"/>
+
+		</f:content>
+	</f:DynamicPage>
+</mvc:View>
